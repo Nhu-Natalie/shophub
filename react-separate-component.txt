@@ -1,0 +1,47 @@
+Note: The key of product >> should pass it directly into the component and it doesn't become a PROP
+key={product.id}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> COMPONENT
+import React from 'react';
+import { Link } from 'react-router-dom'
+
+const ProductCard = (product) => {
+  return (
+    <div className="product-card">
+        <img src={product.image}/>
+        <div className="product-card-content">
+        <h3 className="product-card-name">{product.name}</h3>
+        <p className="product-card-price">${product.price}</p>
+        <div className="product-card-actions">
+            <Link className="btn btn-secondary">View Details</Link>
+            <button className="btn btn-primary">Add to Cart</button>
+        </div>
+        </div>
+    </div>
+  )
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> PARENT
+import ProductCard from '../components/ProductCard';
+
+export default ProductCard
+ <div className="product-grid">
+    {products.map((product)=>(
+        <ProductCard product={product} key={product.id}/>
+    ))}
+</div>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ORIGINAL
+<div className="product-grid">
+    {products.map((product)=>(
+        <div className="product-card" key={product.id}>
+            <img src={product.image}/>
+            <div className="product-card-content">
+            <h3 className="product-card-name">{product.name}</h3>
+            <p className="product-card-price">${product.price}</p>
+            <div className="product-card-actions">
+                <Link className="btn btn-secondary">View Details</Link>
+                <button className="btn btn-primary">Add to Cart</button>
+            </div>
+            </div>
+        </div>
+    ))}
+</div>

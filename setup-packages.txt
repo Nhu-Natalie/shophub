@@ -1,0 +1,4 @@
+1. React Router DOM (have multiple pages in project)
+npm i react-router-dom
+2. React hook form
+npm i react-hook-form (form validation)
