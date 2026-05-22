@@ -1,0 +1,13 @@
+1. github: Create a new repository
+2. Create folder ... then open that in VS Code
+3. npx create-vite@latest
+4. Connect local code with github repository
+   git init // create an empty git repository locally in your computer and add git folder to your project
+   git add . // add all of our files to our repository
+   git commit -m "first commit"
+   git branch -M main
+   git remote add origin https://github.com/Nhu-Natalie/shophub.git
+   git push -u origin main
++++++++++++ create new branch for new update
+   git checkout -b development // create development branch
+   git branch // check branches
