@@ -1,4 +1,4 @@
 1. git branch
 2. git add . // add all files
 3. git commit -m "Added home page"
-4. git push
+4. git push / git push --set-upstream origin development
