@@ -18,3 +18,8 @@
 6. ways to save user information:
 a. Inspect >> Application >> store our data to the Local Storage (session store, cookies, index DB)
 - the user have their browser when they sign up their account is going to be added to this list of users in local storage
+
+7. We can call a HOOK inside another HOOK or COMPONENT no in FUNCTION
+8. HOOKS aren't just things that you get from react >> you can create 
+
+

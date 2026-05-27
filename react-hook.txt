@@ -1,0 +1,25 @@
+A hook is a function in React that let you use State Life Cycle Logic and other react features inside of it
+>> they can return information (like between a normal function and component)
++++++++++++++++++++++++++++++++++++++++++++++++++
+A hook Function we could:
++ creates states inside of it
++ use useEffect inside of it
+
+We can't call a Hooks inside of FUNCTIONs
+function getUser(){
+    const [error, useError] = useState(null)
+    useEffect
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++ A COUPLE STRICT RULES
+We can call a HOOK inside another HOOK or COMPONENT no in FUNCTION
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+It's normal function NOT COMPONENT because not returning any JSX
+function getUser(){
+    
+}
+
+
+

@@ -1,0 +1,4 @@
+It's normal function NOT COMPONENT because not returning any JSX
+function getUser(){
+
+}

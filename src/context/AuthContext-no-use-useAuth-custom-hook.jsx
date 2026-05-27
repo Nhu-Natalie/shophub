@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react"
+import { createContext, useState } from "react"
 
 export const AuthContext = createContext(null)
 
@@ -60,13 +60,3 @@ export default function AuthProvider({children}){
     return <AuthContext.Provider value={{signUp, user, logout, login}}>{children}</AuthContext.Provider>
 }
 
-// Create a CUSTOM HOOK
-// allow us call other hook inside of it
-// This hook helps reduce useContext hook every time in Auth.jsx
-// get back all of values from this context and return it
-// we don't need to add import { AuthContext } from '../context/AuthContext' every single file anymore
-
-export function useAuth(){
-    const context = useContext(AuthContext)
-    return context
-}

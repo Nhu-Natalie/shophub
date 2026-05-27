@@ -1,0 +1,19 @@
+This will allow us to get back here a variable with the sane as whatever you wrote over here
+
+App.jsx:
+<Route path="/products/:id" element={<ProductDetails/>}/>
+
+ProductDetails.jsx:
+import { useParams } from 'react-router-dom'
+const {id} = useParams()
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+EX: ProductDetails.jsx
+import { useParams } from 'react-router-dom'
+const {id} = useParams()
+return (
+    <div>ProductDetails {id}</div>
+  )
+            
+http://localhost:5173/products/8
+ProductDetails 8

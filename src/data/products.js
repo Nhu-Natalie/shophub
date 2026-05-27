@@ -76,3 +76,8 @@ const products = [
 export function getProducts(){
     return products
 }
+
+export function getProductById(id){
+    // id passed is a string >> need to convert to number
+    return products.find((p)=>p.id === Number(id))
+}

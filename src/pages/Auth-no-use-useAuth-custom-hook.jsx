@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import {useContext, useState} from 'react'
 import { useForm } from 'react-hook-form'
-import { useAuth } from '../context/AuthContext'
+import { AuthContext } from '../context/AuthContext'
 
 // redirect user to home page after login successful
 // act like a link where it navigates you to a another page 
@@ -13,7 +13,8 @@ const Auth = () => {
 
   const navigate = useNavigate()
 
-  const {signUp, login} = useAuth()
+  // const {signUp, user, logout, login} = useContext(AuthContext)
+  const {signUp, login} = useContext(AuthContext)
 
   const {
     register, 
