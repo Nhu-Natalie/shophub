@@ -1,0 +1,2 @@
+1. user && >> if user not NULL then render
+{user && <p>User logged in: {user.email}</p>}

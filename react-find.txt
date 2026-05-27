@@ -1,0 +1,5 @@
+The find function allows us to loop through each user which is represented by u and find an entry with an eamil equal to the email being used for signup
+>> if true returns an object
+if(users.find((u) => u.email === email)){
+    return {success: false, error: "Email already exists"}
+}
