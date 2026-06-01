@@ -1,6 +1,7 @@
 // store infor about cart
 
 import { createContext, useState, useContext } from "react"
+import { getProductById } from "../data/products"
 
 export const CartContext = createContext(null)
 
@@ -32,7 +33,63 @@ export default function CartProvider({children}){
         }
     }
 
-    return <CartContext.Provider value={{cartItems, addToCart}}>{children}</CartContext.Provider>
+    // loop through the cartItems and transform this list of objects into a list with info about each product 
+    // that in our cart
+    function getCartItemsWithProducts(){
+        // return a new cartItems Array includes id, quantity, then only about the product information
+        return cartItems.map(item => (
+            {
+                ...item,
+                product: getProductById(item.id)
+            }
+        )).filter((item) => item.product)
+    }
+
+    // remove the item completely function
+    function removeFromCart(productId){
+        setCartItems(cartItems.filter((item)=>item.id !== productId))
+    }
+
+    function updateQuantity(productId, quantity){
+        // remove completely
+        if (quantity <=0 ){
+            updateQuantity(productId)
+            return
+        }
+        setCartItems(
+            // find the product want to change
+            cartItems.map((item)=>
+                item.id === productId ? {...item, quantity} : item
+
+            )
+        )
+    }
+
+    // reduce to calculate the price of all the product combined with their quantity
+    // loop through each cart item starting with a total amount of zero
+    // loop through cart items list and accumulate a value as we move through it.
+    function getCartTotal(){
+        const total = cartItems.reduce((total, item)=>{
+            // getProductByID might return NULL
+            const product = getProductById(item.id)
+            return total + (product ? product.price * item.quantity : 0)
+        }, 0)
+        return total
+    }
+
+    function clearCart(){
+        setCartItem([])
+    }
+
+    return <CartContext.Provider value={{
+        cartItems, 
+        addToCart, 
+        getCartItemsWithProducts, 
+        removeFromCart, 
+        updateQuantity,
+        getCartTotal,
+        clearCart
+    }}>{children}</CartContext.Provider>
 }
 
 
