@@ -7,7 +7,7 @@ const Checkout = () => {
   const total = getCartTotal()
 
   function placeOrder(){
-    alert("Successful Order")
+    alert("Successful Order!");
     // clear the cart
     clearCart()
   }
@@ -39,7 +39,7 @@ const Checkout = () => {
                   <p className="checkout-item-total">
                     ${(item.product.price * item.quantity).toFixed(2)}
                   </p>
-                  <button className="btn btn-secondary btn-small" onClick={removeFromCart(item.id)}>Remove</button>
+                  <button className="btn btn-secondary btn-small" onClick={()=>removeFromCart(item.id)}>Remove</button>
                 </div>
 
               </div>

@@ -37,10 +37,10 @@ export default function CartProvider({children}){
     // that in our cart
     function getCartItemsWithProducts(){
         // return a new cartItems Array includes id, quantity, then only about the product information
-        return cartItems.map(item => (
+        return cartItems.map((item) => (
             {
                 ...item,
-                product: getProductById(item.id)
+                product: getProductById(item.id),
             }
         )).filter((item) => item.product)
     }
@@ -53,14 +53,13 @@ export default function CartProvider({children}){
     function updateQuantity(productId, quantity){
         // remove completely
         if (quantity <=0 ){
-            updateQuantity(productId)
+            removeFromCart(productId)
             return
         }
         setCartItems(
             // find the product want to change
             cartItems.map((item)=>
                 item.id === productId ? {...item, quantity} : item
-
             )
         )
     }
@@ -78,7 +77,7 @@ export default function CartProvider({children}){
     }
 
     function clearCart(){
-        setCartItem([])
+        setCartItems([])
     }
 
     return <CartContext.Provider value={{
