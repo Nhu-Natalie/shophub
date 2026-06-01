@@ -1,0 +1,20 @@
+5. We need to access the information in multiple places in our website
+(Good container for us to turn this state into a global state)
+(this state containing the information of whether a user's logged in or not and their name...)
+>>>>> we should be using the Context API
+
+
+// AuthProvider: wrap around other components
+1. Create a context folder >> create AuthContext.jsx >> create an export AuthProvider function
+
+// When we create the states for the authentication state that we pass on this provider, 
+// we're going to create all them in this provider rather than on the app.jsx component
+// that allow us to keep state and logic definition for each context on their own provider
+2. Go back App.js >> wrap all components by <AuthProvider></AuthProvider>
+
+
+>>>>>>>>>>>>>>>>>>>>>>> Add to Cart Function
+Crete place in which we're going to store information about what items are in the cart for this user
+>> Create Context and Provider >> same thing with 
+
+1. CartContext.jsx: store the user

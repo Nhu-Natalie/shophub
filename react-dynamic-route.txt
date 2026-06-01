@@ -1,0 +1,14 @@
+For Each Product Details
++++++++++++++++++++++++
+Each product has own id
+Dynamic route like : http://localhost:5173/products/id
+
+>>>>>>>>>>>>>>>>>>>>>>
+PM: just a value you pass to the URL >> it's going to be accessible in the component that render that URL
+
+>>>>>>>>>>>>>>>>>>>>>> CREATE DYNAMIC routes
+1. Go to App.jsx
+<Route path="/products/:id" element={<Checkout/>}/>
+
+2. create component
+ProductDetails.jsx

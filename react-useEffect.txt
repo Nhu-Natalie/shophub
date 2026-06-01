@@ -1,0 +1,14 @@
+9. How do we execute a functionality right when the component renders?
+when we look for a product when the component renders. To be able to find the product and then
+set it to this state and display that information to the screen
+
+Hook can execute code at the certain points in the life cycle of a Component
+(if you want to run a piece of code when the component renders, we use a useEffect)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+A useEffect allows us to 
++ render a component
++ run a function right when the component renders as long as we pass here a dependency list
+
+useEffect( () => {
+
+}, [dependency list])

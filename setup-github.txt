@@ -11,3 +11,9 @@
 +++++++++++ create new branch for new update
    git checkout -b development // create development branch
    git branch // check branches
+
+
+++++++++++ update code
+git add .
+git commit -m "Added auth"
+git push

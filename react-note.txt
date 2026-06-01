@@ -1,0 +1,25 @@
+1. <Link></Link>: navigates a user in between the different routes
+2. Import Component: import ProductCard from '../components/ProductCard';
+3. Import Function: import { getProducts } from '../data/products';
+
+4. 
+<div className="form-group">
+    {/* not include for="" here >> because this "for" is reserved word for JS not JSX*/}
+    {/* using htmlFor instead */}
+    <label className="form-label" htmlFor="email">Email</label>
+    <input className="form-input" type="email" id="email"/>
+</div>
+
+5. We need to access the information in multiple places in our website
+(Good container for us to turn this state into a global state)
+(this state containing the information of whether a user's logged in or not and their name...)
+>>>>> we should be using the Context API
+
+6. ways to save user information:
+a. Inspect >> Application >> store our data to the Local Storage (session store, cookies, index DB)
+- the user have their browser when they sign up their account is going to be added to this list of users in local storage
+
+7. We can call a HOOK inside another HOOK or COMPONENT no in FUNCTION
+8. HOOKS aren't just things that you get from react >> you can create 
+
+
