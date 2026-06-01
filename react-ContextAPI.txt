@@ -13,3 +13,8 @@
 2. Go back App.js >> wrap all components by <AuthProvider></AuthProvider>
 
 
+>>>>>>>>>>>>>>>>>>>>>>> Add to Cart Function
+Crete place in which we're going to store information about what items are in the cart for this user
+>> Create Context and Provider >> same thing with 
+
+1. CartContext.jsx: store the user
